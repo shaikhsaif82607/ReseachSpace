@@ -40,3 +40,5 @@ On the profile page, each of the logged-in user's own papers has a Delete resear
 
 
 PDF FIX: View opens view.html and loads PDF as a data URL. Download uses a data URL. This avoids IDM intercepting the PDF request and prevents 0-byte downloads.
+  
+ReseachSpace - Online Research Platform
