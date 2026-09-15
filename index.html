@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>ReseachSpace | Discover Research</title>
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+<div id="toast" class="toast"></div>
+
+<header class="navbar">
+  <a href="index.html" class="brand"><span class="brand-mark">R</span> ReseachSpace</a>
+  <nav class="main-nav">
+    <a href="index.html" data-page="index.html">Home</a>
+    <a href="explore.html" data-page="explore.html">Explore</a>
+    <a href="topics.html" data-page="topics.html">Topics</a>
+    <a href="upload.php" data-page="upload.php">Upload</a>
+    <a href="profile.html" data-page="profile.html">Profile</a>
+  </nav>
+  <div class="nav-actions" id="authNav"><a href="login.html" class="login">Log in</a></div>
+</header>
+
+<main>
+<section class="hero">
+  <div class="hero-content">
+    <span class="eyebrow">THE MODERN RESEARCH COMMUNITY</span>
+    <h1>Discover research.<br><em>Share knowledge.</em><br>Shape the future.</h1>
+    <p>Explore research papers, discover new ideas, share your own work, and connect knowledge across disciplines.</p>
+    <div class="hero-buttons">
+      <a class="btn" href="explore.html">Explore research <b>→</b></a>
+      <a class="btn outline" href="upload.php">Upload a paper</a>
+    </div>
+    <div class="hero-note">
+      <span class="avatar-stack"><i>AI</i><i>CS</i><i>ML</i><i>+</i></span>
+      <span>For students, researchers & innovators</span>
+    </div>
+  </div>
+
+  <div class="hero-art">
+    <div class="glow"></div>
+    <div class="research-card">
+      <div class="card-top"><span>RESEARCH INSIGHTS</span><b>2026</b></div>
+      <div class="fake-dashboard">
+        <div class="chart">
+          <span style="height:35%"></span><span style="height:50%"></span>
+          <span style="height:43%"></span><span style="height:70%"></span>
+          <span style="height:60%"></span><span style="height:90%"></span>
+        </div>
+        <div class="fake-paper">
+          <strong>RESEARCH</strong><hr><i></i><i></i><i></i><i></i><i></i>
+        </div>
+      </div>
+      <div class="card-bottom">↑ 28.4% research activity <b>↗</b></div>
+    </div>
+    <div class="float-box one"><strong>12,840</strong><small>papers explored</small></div>
+    <div class="float-box two"><strong>2,416</strong><small>active researchers</small></div>
+  </div>
+</section>
+
+<section class="stats">
+  <div><strong>12K+</strong><span>Research papers</span></div>
+  <div><strong>2.4K+</strong><span>Researchers</span></div>
+  <div><strong>18</strong><span>Research fields</span></div>
+  <div><strong>42K+</strong><span>Downloads</span></div>
+</section>
+
+<section class="section">
+  <div class="section-head">
+    <div><span class="eyebrow">FIND YOUR NEXT IDEA</span><h2>Discover research<br>that moves you forward.</h2></div>
+    <a href="explore.html" class="text-link">Explore all →</a>
+  </div>
+  <div class="search-box">
+    <span>⌕</span>
+    <input id="homeSearch" placeholder="Search papers, authors, topics, keywords..."
+           onkeydown="if(event.key==='Enter') searchHome()">
+    <button onclick="searchHome()">Search</button>
+  </div>
+  <div class="pills">
+    <a href="explore.html?topic=Artificial Intelligence">Artificial Intelligence</a>
+    <a href="explore.html?topic=Cloud Computing">Cloud Computing</a>
+    <a href="explore.html?topic=Cybersecurity">Cybersecurity</a>
+    <a href="explore.html?topic=IoT">Internet of Things</a>
+    <a href="explore.html?topic=Data Science">Data Science</a>
+    <a href="explore.html?topic=Healthcare">Healthcare</a>
+  </div>
+</section>
+
+<section class="section featured">
+  <div class="section-head">
+    <div><span class="eyebrow">TRENDING RESEARCH</span><h2>Research worth reading.</h2></div>
+    <a href="explore.html" class="text-link">View library →</a>
+  </div>
+  <div id="featured" class="paper-grid"></div>
+</section>
+
+<section class="feature-band">
+  <div class="abstract-art">
+    <div class="circle">↑</div>
+    <div class="ring r1"></div><div class="ring r2"></div>
+    <span>YOUR RESEARCH<br>MATTERS</span>
+  </div>
+  <div>
+    <span class="eyebrow">SHARE YOUR WORK</span>
+    <h2>Turn your research into a resource for others.</h2>
+    <p>Upload your paper, describe your work, and make your research easy for others to discover.</p>
+    <ul class="checks">
+      <li>✓ Upload PDF research papers</li>
+      <li>✓ Add authors, abstracts and topics</li>
+      <li>✓ Track views and downloads</li>
+    </ul>
+    <a href="upload.php" class="btn">Upload your research →</a>
+  </div>
+</section>
+
+<section class="section impact">
+  <div>
+    <span class="eyebrow">RESEARCH IMPACT</span>
+    <h2>See how your ideas travel.</h2>
+    <p>Simple metrics help researchers understand how their work is being discovered and read.</p>
+    <a href="profile.html" class="text-link">View researcher profile →</a>
+  </div>
+  <div class="analytics">
+    <div class="analytics-head"><span>Research activity</span><small>Last 6 months ▾</small></div>
+    <strong class="big-number">8,462 <small>views</small></strong>
+    <div class="line"><svg viewBox="0 0 600 180" preserveAspectRatio="none"><polyline points="0,145 70,120 130,132 195,82 255,98 320,58 380,70 445,38 510,52 600,15" fill="none" stroke="currentColor" stroke-width="5"/></svg></div>
+    <div class="months"><span>Apr</span><span>May</span><span>Jun</span><span>Jul</span><span>Aug</span><span>Sep</span></div>
+  </div>
+</section>
+
+<section class="cta">
+  <span class="eyebrow">START EXPLORING</span>
+  <h2>Good research should<br>be easy to discover.</h2>
+  <p>Join a platform built around knowledge, discovery and collaboration.</p>
+  <a href="signup.html" class="btn">Create your free account →</a>
+</section>
+</main>
+
+<footer>
+  <div class="footer-grid">
+    <div><a class="brand" href="index.html"><span class="brand-mark">R</span> ReseachSpace</a><p>A modern home for research, ideas and discovery.</p></div>
+    <div><h4>Explore</h4><a href="explore.html">Research library</a><a href="topics.html">Topics</a><a href="upload.php">Upload paper</a></div>
+    <div><h4>Community</h4><a href="profile.html">Researchers</a><a href="#">Discussions</a><a href="#">Events</a></div>
+    <div><h4>Platform</h4><a href="#">About</a><a href="#">Help center</a><a href="#">Privacy</a></div>
+  </div>
+  <div class="footer-bottom"><span>© 2026 ReseachSpace</span><span>Cloud Research Platform</span></div>
+</footer>
+<script src="app.js?v=delete1"></script>
+</body>
+</html>

@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0"><title>Explore Research | ReseachSpace</title><link rel="stylesheet" href="styles.css"></head>
+<body>
+<header class="navbar">
+  <a href="index.html" class="brand"><span class="brand-mark">R</span> ReseachSpace</a>
+  <nav class="main-nav">
+    <a href="index.html" data-page="index.html">Home</a>
+    <a href="explore.html" data-page="explore.html">Explore</a>
+    <a href="topics.html" data-page="topics.html">Topics</a>
+    <a href="upload.php" data-page="upload.php">Upload</a>
+    <a href="profile.html" data-page="profile.html">Profile</a>
+  </nav>
+  <div class="nav-actions" id="authNav"><a href="login.html" class="login">Log in</a></div>
+</header>
+<main>
+<section class="page-hero"><span class="eyebrow">RESEARCH LIBRARY</span><h1>Explore ideas.<br><em>Find what matters.</em></h1><p>Search research papers by title, author, field or keyword.</p>
+<div class="search-box"><span>⌕</span><input id="librarySearch" placeholder="Search research papers..." oninput="renderLibrary()"><button onclick="renderLibrary()">Search</button></div></section>
+<section class="library">
+<aside class="filters">
+  <div class="filter-title"><b>Filters</b><button onclick="clearFilters()">Clear</button></div>
+  <label>Research field</label>
+  <select id="topicFilter" onchange="renderLibrary()"><option value="">All fields</option><option>Artificial Intelligence</option><option>Cloud Computing</option><option>Cybersecurity</option><option>IoT</option><option>Data Science</option><option>Healthcare</option><option>Computer Science</option><option>Physics</option></select>
+  <label>Year</label><select id="yearFilter" onchange="renderLibrary()"><option value="">Any year</option><option>2026</option><option>2025</option><option>2024</option><option>2023</option></select>
+  <label>Sort</label><select id="sortFilter" onchange="renderLibrary()"><option value="latest">Latest</option><option value="views">Most viewed</option><option value="downloads">Most downloaded</option></select>
+  <div class="cloud-note"><b>☁ Cloud-ready</b><p>In the AWS version, PDFs can be stored in Amazon S3 and metadata in a database.</p></div>
+</aside>
+<div class="results"><div class="results-head"><b id="count">0 papers</b><span>Research library</span></div><div id="paperList"></div></div>
+</section>
+</main>
+<footer class="compact-footer"><span>© 2026 ReseachSpace</span><span>Cloud Research Platform</span></footer>
+<script src="app.js?v=delete1"></script>
+</body></html>

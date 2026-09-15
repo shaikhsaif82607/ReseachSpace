@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0"><title>Researcher Profile | ReseachSpace</title><link rel="stylesheet" href="styles.css"></head>
+<body>
+<header class="navbar">
+  <a href="index.html" class="brand"><span class="brand-mark">R</span> ReseachSpace</a>
+  <nav class="main-nav">
+    <a href="index.html" data-page="index.html">Home</a>
+    <a href="explore.html" data-page="explore.html">Explore</a>
+    <a href="topics.html" data-page="topics.html">Topics</a>
+    <a href="upload.php" data-page="upload.php">Upload</a>
+    <a href="profile.html" data-page="profile.html">Profile</a>
+  </nav>
+  <div class="nav-actions" id="authNav"><a href="login.html" class="login">Log in</a></div>
+</header>
+<main class="profile">
+<section class="profile-head"><div class="profile-avatar" id="profileAvatar">RS</div><div class="profile-info"><span class="eyebrow">RESEARCHER PROFILE</span><h1 id="profileName">Loading...</h1><p id="profileEmail">Loading...</p><div class="profile-tags"><span>Researcher</span><span>ReseachSpace</span></div></div><button class="btn outline" onclick="toast('Profile editing will be added later.')">Edit profile</button></section>
+<section class="profile-stats"><div><b id="profileViews">0</b><small>Total views</small></div><div><b id="profileDownloads">0</b><small>Downloads</small></div><div><b id="profileCitations">0</b><small>Citations</small></div><div><b id="profilePaperCount">0</b><small>Papers</small></div></section>
+<section class="profile-content">
+  <div>
+    <div class="section-mini"><h2>My published research</h2><span id="myPaperCount">0 papers</span></div>
+    <div id="profilePapers"></div>
+
+<div id="editModal" class="edit-modal hidden">
+  <div class="edit-card">
+    <div class="edit-head"><h2>Edit research</h2><button type="button" class="edit-close" onclick="closeEdit()">×</button></div>
+    <form id="editForm">
+      <input type="hidden" name="id" id="editId">
+      <label>Paper title<input name="title" id="editTitle" required></label>
+      <div class="two-col"><label>Research field<select name="topic" id="editTopic"><option>Artificial Intelligence</option><option>Cloud Computing</option><option>Cybersecurity</option><option>IoT</option><option>Data Science</option><option>Healthcare</option><option>Computer Science</option><option>Physics</option></select></label><label>Year<select name="year" id="editYear"><option>2026</option><option>2025</option><option>2024</option><option>2023</option></select></label></div>
+      <label>Abstract<textarea name="abstract" id="editAbstract" required rows="7"></textarea></label>
+      <div class="edit-actions"><button type="button" class="mini" onclick="closeEdit()">Cancel</button><button class="btn small" type="submit">Save changes</button></div>
+    </form>
+  </div>
+</div>
+
+    <div class="section-mini" style="margin-top:42px"><h2>More research on ReseachSpace</h2><span>Featured</span></div>
+    <div id="profileFeatured"></div>
+  </div>
+  <aside class="impact-card"><h3>Research activity</h3><strong id="impactScore">0<small>/100</small></strong><p id="impactText">Upload papers and share your research to build activity.</p><div class="impact-bar"><i id="impactBar"></i></div><small>Activity score</small></aside>
+</section>
+</main>
+<footer class="compact-footer"><span>© 2026 ReseachSpace</span><span>Researcher profile</span></footer>
+<div id="toast" class="toast"></div>
+<script src="app.js?v=edit1"></script>
+</body></html>

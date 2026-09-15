@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1.0"><title>View Research | ReseachSpace</title>
+<style>html,body{margin:0;height:100%;overflow:hidden;background:#222}iframe{width:100%;height:100%;border:0}#msg{color:white;font:18px Arial;padding:30px}</style></head>
+<body><div id="msg">Opening PDF...</div><iframe id="pdf" title="Research paper PDF" style="display:none"></iframe>
+<script>
+(async()=>{
+ const id=new URLSearchParams(location.search).get('id');
+ if(!id){document.getElementById('msg').textContent='Invalid paper ID';return;}
+ try{
+  const r=await fetch('/ReseachSpace/backend/paper_file.php?id='+encodeURIComponent(id)+'&mode=view&_='+Date.now(),{credentials:'include',cache:'no-store',headers:{'Accept':'application/json'}});
+  const text=await r.text();let d;try{d=JSON.parse(text)}catch(e){throw new Error(text.slice(0,200)||'Invalid server response')}
+  if(!r.ok||!d.ok)throw new Error(d.error||'Could not open PDF');
+  const frame=document.getElementById('pdf');
+  frame.src='data:application/pdf;base64,'+d.data;
+  frame.style.display='block';document.getElementById('msg').remove();document.title=d.name+' | ReseachSpace';
+ }catch(e){document.getElementById('msg').textContent=e.message||'Could not open this PDF.';console.error(e)}
+})();
+</script></body></html>

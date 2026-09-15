@@ -1,0 +1,4 @@
+View and Download now locate PDFs using the database path plus the common backend/uploads and uploads locations.
+
+For new uploads, upload.php stores PDFs in backend/uploads/.
+Do not delete your existing backend/uploads folder when replacing the project.

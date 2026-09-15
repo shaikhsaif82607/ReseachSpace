@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Create account | ReseachSpace</title>
+<link rel="stylesheet" href="styles.css">
+</head>
+<body class="auth" data-auth="signup">
+<header class="navbar">
+  <a href="index.html" class="brand"><span class="brand-mark">R</span> ReseachSpace</a>
+  <nav class="main-nav">
+    <a href="index.html" data-page="index.html">Home</a>
+    <a href="explore.html" data-page="explore.html">Explore</a>
+    <a href="topics.html" data-page="topics.html">Topics</a>
+    <a href="upload.php" data-page="upload.php">Upload</a>
+    <a href="profile.html" data-page="profile.html">Profile</a>
+  </nav>
+  <div class="nav-actions" id="authNav"><a href="login.html" class="login">Log in</a></div>
+</header>
+<main class="auth-main">
+  <div class="auth-card">
+    <div class="auth-heading">
+      <span class="eyebrow">JOIN RESEACHSPACE</span>
+      <h1>Create your account</h1>
+      <p>Join a community built around research and discovery.</p>
+    </div>
+
+    <form id="authForm">
+      <label>Full name
+        <input name="name" type="text" required placeholder="Your full name" autocomplete="name">
+      </label>
+      <label>Email address
+        <input name="email" type="email" required placeholder="you@example.com" autocomplete="email">
+      </label>
+      <label>Password
+        <input name="password" type="password" required minlength="6" placeholder="At least 6 characters" autocomplete="new-password">
+      </label>
+      <button class="btn full" type="submit">Create account →</button>
+    </form>
+
+    <div class="or"><span>or</span></div>
+    <button class="google" type="button" onclick="demoLogin()">Continue with Google <b>G</b></button>
+    <p class="switch">Already have an account? <a href="login.html">Log in</a></p>
+  </div>
+  <small class="terms">By continuing, you agree to our Terms and Privacy Policy.</small>
+</main>
+<div id="toast" class="toast"></div>
+<script src="app.js?v=delete1"></script>
+</body>
+</html>
