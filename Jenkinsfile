@@ -4,9 +4,10 @@ pipeline {
     stages {
         stage('Build') {
             steps {
-                echo 'Building ReseachSpace...'
+                    echo 'Building ReseachSpace Docker image...'
+                    bat 'docker build -t reseachspace .'
+                 }
             }
-        }
 
         stage('Test') {
             steps {
