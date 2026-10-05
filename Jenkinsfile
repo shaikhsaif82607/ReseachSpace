@@ -4,10 +4,10 @@ pipeline {
     stages {
         stage('Build') {
             steps {
-                    echo 'Building ReseachSpace Docker image...'
-                    bat 'docker build -t reseachspace .'
-                }
+                echo 'Building ReseachSpace Docker image...'
+                bat 'docker build -t reseachspace .'
             }
+        }
 
         stage('Test') {
             steps {
@@ -16,6 +16,13 @@ pipeline {
                 bat 'ping 127.0.0.1 -n 6 > nul'
                 bat 'curl http://localhost:8083'
                 bat 'docker stop reseachspace-test'
+            }
+        }
+
+        stage('Docker') {
+            steps {
+                echo 'Starting ReseachSpace Docker environment...'
+                bat 'docker compose up -d'
             }
         }
     }
