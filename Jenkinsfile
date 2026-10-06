@@ -22,7 +22,7 @@ pipeline {
         stage('Docker') {
             steps {
                 echo 'Starting ReseachSpace Docker environment...'
-                bat 'docker compose up -d'
+                docker compose up -d --build --force-recreate
             }
         }
     }
