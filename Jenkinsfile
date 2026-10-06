@@ -13,8 +13,8 @@ pipeline {
             steps {
                 echo 'Testing ReseachSpace Docker image...'
                 bat 'docker run --rm -d --name reseachspace-test -p 8083:80 reseachspace'
-                bat 'ping 127.0.0.1 -n 6 > nul'
-                bat 'curl http://localhost:8083'
+                bat 'powershell -NoProfile -Command "Start-Sleep -Seconds 5"'
+                bat 'curl.exe --fail http://localhost:8083'
                 bat 'docker stop reseachspace-test'
             }
         }
